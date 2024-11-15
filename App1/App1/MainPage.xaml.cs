@@ -17,9 +17,9 @@ namespace App1
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            int Uno = Convert.ToInt32(uno.Text);
-            int Dos = Convert.ToInt32(dos.Text);
-            int r = Convert.ToInt32(R.Text);
+            double Uno = Convert.ToInt32(uno.Text);
+            double Dos = Convert.ToInt32(dos.Text);
+            double r = Convert.ToInt32(R.Text);
             if (suma.IsChecked)
             {
                 r = Uno + Dos;

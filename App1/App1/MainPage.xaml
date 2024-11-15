@@ -1,12 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App1.MainPage">
+             x:Class="App1.MainPage"
+             BackgroundColor="Black">
 
-    <StackLayout BackgroundColor="Black"><!-- 
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>                                
+    <StackLayout>
+        <Frame BackgroundColor="Black" Padding="24" CornerRadius="0">
+            <Label Text="Calculadora" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <!--                                 
         <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
         <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
         <Label FontSize="16" Padding="30,24,30,0">
@@ -33,24 +35,25 @@
                 <ColumnDefinition Width="*" />  
                 <ColumnDefinition Width="*" />  
                 <ColumnDefinition Width="*" />  
-            </Grid.ColumnDefinitions>           
-            <Label Grid.Row="0" Grid.Column="0" Text="Dame un numero:" TextColor="White" Grid.ColumnSpan="2"/>
-            <Entry Grid.Row="1" Grid.Column="0" Placeholder="Aqui" x:Name="uno" Keyboard="Numeric" PlaceholderColor="Azure" Grid.ColumnSpan="2" TextColor="Azure"/>
-            <Label Grid.Row="0" Grid.Column="2" Text="Dame Otro numero numero:" TextColor="White" Grid.ColumnSpan="2"/>
-            <Entry Grid.Row="1" Grid.Column="2" Placeholder="Aqui" x:Name="dos" Keyboard="Numeric" PlaceholderColor="Azure" Grid.ColumnSpan="2" TextColor="Azure"/>
-            <Label Grid.Row="2" Grid.Column="0" Text="Suma" TextColor="White"/>
-            <RadioButton Grid.Row="3" Grid.Column="0" GroupName="multiplo" x:Name="suma" IsChecked="False" BorderColor="Azure" CornerRadius="50"/>
-            <Label Grid.Row="2" Grid.Column="1" Text="Resta" TextColor="White"/>
-            <RadioButton Grid.Row="3" Grid.Column="1" GroupName="multiplo" x:Name="resta" IsChecked="False" BorderColor="Azure" CornerRadius="50"/>
-            <Label Grid.Row="2" Grid.Column="2" Text="Division" TextColor="White"/>
-            <RadioButton Grid.Row="3" Grid.Column="2" GroupName="multiplo" x:Name="division" IsChecked="False" BorderColor="Azure" CornerRadius="50"/>
-            <Label Grid.Row="2" Grid.Column="3" Text="Multiplicación" TextColor="White"/>
-            <RadioButton Grid.Row="3" Grid.Column="3" GroupName="multiplo" x:Name="multiplicacion" IsChecked="False" BorderColor="Azure" CornerRadius="50"/>
-        </Grid>                                 
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" Text="Dame un numero:" TextColor="White" Grid.ColumnSpan="2" Padding="0,25,0,0"/>
+            <Entry Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" Placeholder="Aqui" x:Name="uno" Keyboard="Numeric" PlaceholderColor="Azure" Grid.ColumnSpan="2" TextColor="Azure"/>
+            <Label Grid.Row="0" Grid.Column="2" Text="Dame Otro numero numero:" TextColor="White" Grid.ColumnSpan="2" Padding="0,25,0,0"/>
+            <Entry Grid.Row="1" Grid.Column="2" HorizontalOptions="Center" Placeholder="Aqui" x:Name="dos" Keyboard="Numeric" PlaceholderColor="Azure" Grid.ColumnSpan="2" TextColor="Azure"/>
+            <Label Grid.Row="2" Grid.Column="0" Text="Suma" TextColor="White" HorizontalOptions="Center" Padding="0,25,0,0"/>
+            <RadioButton Grid.Row="3" Grid.Column="0" GroupName="multiplo" x:Name="suma" IsChecked="False" BorderColor="Azure" CornerRadius="50" HorizontalOptions="Center" BackgroundColor="White"/>
+            <Label Grid.Row="2" Grid.Column="1" Text="Resta" TextColor="White" HorizontalOptions="Center" Padding="0,25,0,0"/>
+            <RadioButton Grid.Row="3" Grid.Column="1" GroupName="multiplo" x:Name="resta" IsChecked="False" BorderColor="Azure" CornerRadius="50" HorizontalOptions="Center" BackgroundColor="White"/>
+            <Label Grid.Row="2" Grid.Column="2" Text="Division" TextColor="White" HorizontalOptions="Center" Padding="0,25,0,0"/>
+            <RadioButton Grid.Row="3" Grid.Column="2" GroupName="multiplo" x:Name="division" IsChecked="False" BorderColor="Azure" CornerRadius="50" HorizontalOptions="Center" BackgroundColor="White"/>
+            <Label Grid.Row="2" Grid.Column="3" Text="Multiplicación" TextColor="White" HorizontalOptions="Center" Padding="0,25,0,0"/>
+            <RadioButton Grid.Row="3" Grid.Column="3" GroupName="multiplo" x:Name="multiplicacion" IsChecked="False" BorderColor="Azure" CornerRadius="50" HorizontalOptions="Center" BackgroundColor="White"/>
+        </Grid>
+        <Frame BackgroundColor="White" Margin="100,0,100,0" CornerRadius="50">
+            <Entry IsEnabled="False" Placeholder="Resultado" x:Name="R" FontSize="30" BackgroundColor="White" HorizontalOptions="Center" TextColor="Azure" HorizontalTextAlignment="Center"/>
+        </Frame>
                                                 
-        <Entry IsEnabled="False" Placeholder="Resultado" x:Name="R" FontSize="30" BackgroundColor="Gray" HorizontalOptions="Center" TextColor="Azure" HorizontalTextAlignment="Center"/>
-                                                
-        <Button Text="Enviar" Clicked="Button_Clicked" Margin="90,0,90,0" CornerRadius="50" BackgroundColor="Gray" TextColor="White" />
+        <Button Text="Enviar" Clicked="Button_Clicked" Margin="90,40,90,0" CornerRadius="50" BackgroundColor="Gray" TextColor="White" />
     </StackLayout>                              
                                                 
 </ContentPage>                                  
